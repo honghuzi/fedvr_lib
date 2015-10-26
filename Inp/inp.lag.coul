@@ -1,0 +1,21 @@
+$begin_calculation
+  Number_of_Data_Sets=1
+$end
+
+$general_keywords_1
+  coordinate_system=spherical number_of_spatial_dimensions=1
+  coordinate_label_1=r sector_points sector_factors sector_polynomials
+  weighting_function=laguerre  reference_weight=none
+  sector_matrices hamiltonian form_nabla form_hamiltonian
+  diagonalize_hamiltonian  
+$end
+
+$spherical_r
+ reuse_space_data automate reuse_sector_information
+ number_of_fixed_points=0 number_of_points=30
+ maximum_l_value=5
+$end
+
+$potential_r
+ potential_type_region_1=coulomb 
+$end 

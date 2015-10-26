@@ -1,0 +1,20 @@
+$begin_calculation
+  Number_of_Data_Sets=1
+$end
+
+$general_keywords_1
+  coordinate_system=cartesian number_of_spatial_dimensions=1
+  coordinate_label_1=x sector_points sector_factors sector_polynomials
+  weighting_function=hermite  reference_weight=none hamiltonian
+  sector_matrices diagonalize_hamiltonian form_nabla form_hamiltonian
+$end
+
+$cartesian_x
+ reuse_space_data automate reuse_sector_information
+ number_of_fixed_points=0 number_of_points=30
+ maximum_l_value=0
+$end
+
+$potential_x
+ potential_type_region_1=harmonic_oscillator
+$end

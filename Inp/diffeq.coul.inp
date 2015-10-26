@@ -1,0 +1,14 @@
+$pde
+  coordinate_system=spherical xtype_differential_equation=eigenvalue
+  number_of_dimensions=1  number_of_energies=1 coordinate_label_1=r
+  coordinate_label_2=theta sector_matrices form_hamiltonian
+  diagonalize_hamiltonian type_differential_equation=eigenvalue
+$end
+
+$poisson_r
+ number_of_right_hand_sides=1 inhomogeneity=one
+$end
+
+$potential_r
+ potential_type_region_1=well well_depth=-1.0
+$end 

@@ -1,0 +1,28 @@
+$route
+
+$end
+          
+$nonstd
+11//00;
+20//01;
+$end
+
+$title
+Testing DVRLIB
+$end
+
+$dvr_input
+ number-of-space-dimensions=1  dimension-1=x
+$end
+$h0(x)
+ number-of-regions=2 polynomial-order-per-region=(10,50) 
+ parity=none  
+ region-boundaries=(0.d0,1.d0,50.d0)  
+ number-of-fixed-points=2
+ left-fixed-point right-fixed-point print=all angular-momentum=0
+ drop-first-function drop-last-function
+$end
+$v0(x)
+ use-atomic-units potential=multiple-wells number-of-wells=2
+ well-edges=(0.d0,1.d0,50.d0) well-values=(-1.d0,0.d0)
+$end

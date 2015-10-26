@@ -1,0 +1,28 @@
+$begin_data
+  number_of_data_sets=1 compute_regional_matrices
+$end
+
+$dvr_basis_case_1
+ number_of_space_variables=1 space_variable_1=rho
+ coordinate_system=cylindrical use_atomic_units kinetic_energy_type=packed
+ xplot get_eigenpairs diagonal_modification=none 
+ plot_step=1 print=all_details key_word=h0_1 
+$end
+
+$h0_1(rho)
+ automate number_of_major_blocks=1 weight_type=cylindrical use_unit_weight
+ number_of_fixed_points=1 xleft_fixed_point right_fixed_point 
+ xdrop_left_function drop_right_function xdo_not_diagonalize
+ print=all xsector_print=sector_details reuse_space_data 
+ automate number_of_major_blocks=1
+ number_of_reference_quadrature_points_per_sub_region=100
+$end
+
+ $block_1
+  default_order=(5) number_of_subregions=3
+  left_boundary=0.0d0 right_boundary=1.0d0
+ $end
+
+$v_reg_1(rho)
+ use_atomic_units potential=none angular_momentum=1
+$end

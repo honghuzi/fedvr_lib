@@ -1,0 +1,27 @@
+$route
+
+$end
+          
+$nonstd
+11//00;
+20//01;
+$end
+
+$title
+Testing DVRLIB
+$end
+
+$dvr_input
+ number-of-space-variables=1  space-variable-1=x
+ kinetic-energy-type=packed coordinate-system=cartesian
+$end
+
+$h0(x)
+ xregion-boundaries=(0.d0,1.d0)  weight-type=fourier
+ print=all angular-momentum=0
+ number-of-points=3
+$end
+
+$v_reg_1(x)
+ use-atomic-units potential=none
+$end

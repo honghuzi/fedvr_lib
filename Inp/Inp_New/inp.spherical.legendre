@@ -1,0 +1,24 @@
+$data_keyword
+  coordinate_system=spherical number_of_spatial_dimensions=1
+  coordinate_label_1=theta sector_points sector_factors sector_polynomials
+  weighting_function=legendre  reference_weight=none
+  sector_matrices hamiltonian eigenvalues
+$end
+
+$spherical
+ maximum_l_value=0 maximum_m_value=5
+$end
+
+$theta
+automate reuse_sector_information number_of_major_blocks=1
+$end
+
+$theta_block_1
+number_of_subregions=10  default_order=15 
+left_boundary=-1.d0 right_boundary=1.d0
+$end
+
+$theta_v_reg_1
+ potential=none
+$end
+

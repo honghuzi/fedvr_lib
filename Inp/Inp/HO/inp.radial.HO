@@ -1,0 +1,25 @@
+$begin_data
+  number_of_data_sets=1 compute_regional_matrices
+$end
+$dvr_basis_case_1
+ number_of_space_variables=1 coordinate_system=cartesian
+ space_variable_1=x use_atomic_units kinetic_energy_type=packed
+ xplot get_eigenpairs diagonal_modification=none 
+ plot_step=1 print=all_details key_word=h0_1 xangular_momentum=2
+$end
+
+$h0_1(x)
+ automate number_of_major_blocks=1 reuse_space_data 
+ parity=none  number_of_fixed_points=2 
+ left_fixed_point right_fixed_point print=all
+ drop_left_function xdrop_right_function
+$end
+
+ $block_1
+  default_order=9 number_of_subregions=3
+  left_boundary=0.d0 right_boundary=10.d0
+ $end
+
+$v_reg_1(x)
+ use_atomic_units potential=harmonic_oscillator
+$end

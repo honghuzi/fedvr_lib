@@ -1,0 +1,11 @@
+$general_keywords
+  coordinate_system=fourier number_of_spatial_dimensions=1
+$end
+
+$fourier
+ region_boundaries=(0.d0,1.d0) number_of_points=10
+$end
+
+$potential
+ potential_type_region_1=none 
+$end 

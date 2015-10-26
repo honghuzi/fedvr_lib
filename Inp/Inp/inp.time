@@ -1,0 +1,23 @@
+$route
+ number-of-dimensions=1 dimension-1=t 
+$end
+          
+$nonstd
+63//00;
+20//01;
+$end
+
+$title
+DVR Code Test on simple well
+$end
+
+$h0(t)
+ region-boundaries=(0.d0,1.d0) polynomial-order=10 print=all
+$end
+
+$v0(t)
+ use-atomic-units potential=none
+$end
+
+
+

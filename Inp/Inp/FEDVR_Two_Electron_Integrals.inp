@@ -1,0 +1,5 @@
+$two_electron_integrals
+  coordinate_system=spherical repesentation=spherical_harmonics
+  maximum_orbital_l=1 maximum_orbital_m=1 maximum_total_L=2
+  maximum_total_M=1
+$end

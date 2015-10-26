@@ -1,0 +1,69 @@
+$begin_calculation
+  Number_of_Data_Sets=2
+$end
+$general_keywords_1
+  coordinate_system=spherical number_of_spatial_dimensions=1
+  coordinate_label_1=r sector_points sector_factors sector_polynomials
+  weighting_function=legendre  reference_weight=none
+  sector_matrices hamiltonian eigenvalues diagonalize
+  maximum_l_value=1 solve_poisson_equation
+$end
+
+$spherical_r
+ reuse_space_data automate reuse_sector_information
+ number_of_fixed_points=1 right_fixed_point
+ drop_right_function number_of_major_blocks=1
+$end
+
+$r_block_1
+ number_of_subregions=1 left_boundary=0.d0
+ right_boundary=1.0d0 default_order=5
+$end
+
+$potential
+ potential_type_region_1=none 
+$end 
+
+$poisson_r
+ number_of_right_hand_sides=1 inhomogeneity=one
+$end
+
+$general_keywords_2
+  coordinate_system=spherical number_of_spatial_dimensions=1
+  maximum_m_value=2 coordinate_label_1=theta
+  sector_points sector_factors sector_polynomials sector_matrices
+  weighting_function=legendre reference_weight=none diagonalize
+  sector_matrices hamiltonian eigenvalues diagonalize
+$end
+
+$spherical_theta
+ reuse_space_data automate reuse_sector_information
+ number_of_fixed_points=0 xleft_fixed_point xright_fixed_point
+ xdrop_left_function xdrop_right_function number_of_major_blocks=4
+$end
+
+$theta_block_1
+ number_of_subregions=1 left_boundary=-1.d0
+ right_boundary=-.5d0 default_order=10
+$end
+
+$theta_block_2
+ number_of_subregions=1 left_boundary=-.5d0
+ right_boundary=0.0d0 default_order=10
+$end
+
+$theta_block_3
+ number_of_subregions=1 left_boundary=0.d0
+ right_boundary=.5d0 default_order=10
+$end
+
+$theta_block_4
+ number_of_subregions=1 left_boundary=.5d0
+ right_boundary=1.0d0 default_order=10
+$end
+
+$potential
+ potential_type_region_1=none 
+$end 
+$xtwo_electron_r
+$end

@@ -1,0 +1,16 @@
+$general_keywords
+  coordinate_system=spherical number_of_spatial_dimensions=1
+  coordinate_label_1=r sector_points sector_factors sector_polynomials
+  weighting_function=laguerre  reference_weight=none
+  sector_matrices hamiltonian eigenvalues
+  maximum_l_value=5
+$end
+
+$spherical_r
+ reuse_space_data automate reuse_sector_information
+ number_of_fixed_points=0 number_of_points=30
+$end
+
+$potential
+ potential_type_region_1=coulomb 
+$end 

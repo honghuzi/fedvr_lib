@@ -1,0 +1,26 @@
+$data_keyword
+  coordinate_system=cylindrical number_of_spatial_dimensions=1
+  coordinate_label_1=rho sector_points sector_factors sector_polynomials
+  weighting_function=legendre  reference_weight=none
+  sector_matrices hamiltonian eigenvalues
+$end
+
+$cylindrical
+ maximum_m_value=0
+$end
+
+$rho
+ automate reuse_sector_information number_of_major_blocks=1
+ number_of_fixed_points=2 left_fixed_point right_fixed_point 
+ xdrop_left_function drop_right_function
+$end
+
+$rho_block_1
+number_of_subregions=1  default_order=15 
+left_boundary=0.d0 right_boundary=1.d0
+$end
+
+$rho_v_reg_1
+ potential=none
+$end
+

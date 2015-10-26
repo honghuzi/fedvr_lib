@@ -1,0 +1,14 @@
+$general_keywords
+  coordinate_system=cartesian number_of_spatial_dimensions=1
+  coordinate_label_1=x sector_points sector_factors sector_polynomials
+  weighting_function=hermite  reference_weight=none
+  sector_matrices hamiltonian eigenvalues
+$end
+
+$cartesian_x
+ number_of_points=30 
+$end
+
+$potential
+ potential_type_region_1=harmonic_oscillator
+$end

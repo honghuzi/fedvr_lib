@@ -1,0 +1,66 @@
+$route
+
+$end
+          
+$nonstd
+11//00;
+20//01;
+$end
+
+$title
+Testing DVRLIB
+$end
+
+$dvr_input
+ number-of-space-variables=1  space-variable-1=x 
+ kinetic-energy-type=packed coordinate-system=cartesian
+$end
+
+$h0(x)
+ automate number-of-major-blocks=4
+ parity=none  xreuse-space-data
+ region-boundaries=(0.d0,2.d0)  
+ number-of-fixed-points=2
+ left-fixed-point right-fixed-point print=all angular-momentum=0
+ drop-left-function drop-right-function
+$end
+
+ $block-1
+  default-order=5 number-of-subregions=1
+  left-boundary=0.d0 right-boundary=.95d0
+ $end
+
+$v_reg_1(x)
+ use-atomic-units potential=well
+ well-depth=-1.d0 well-size=1.d0
+$end
+
+ $block-2
+  default-order=25 number-of-subregions=1
+  left-boundary=.95d0 right-boundary=1.0d0
+ $end
+
+$v_reg_2(x)
+ use-atomic-units potential=well
+ well-depth=-1.d0 well-size=.1d0
+$end
+
+ $block-3
+  default-order=25 number-of-subregions=1
+  left-boundary=1.0d0 right-boundary=1.05d0
+ $end
+
+$v_reg_3(x)
+ use-atomic-units potential=well
+ well-depth=0.d0 well-size=.1d0
+$end
+
+ $block-4
+  default-order=5 number-of-subregions=1
+  left-boundary=1.05d0 right-boundary=2.0d0
+ $end
+
+$v_reg_4(x)
+ use-atomic-units potential=well
+ well-depth=0.d0 well-size=.9d0
+$end

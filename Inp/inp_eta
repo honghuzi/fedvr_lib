@@ -1,0 +1,42 @@
+$begin_calculation
+  Number_of_Data_Sets=1
+$end
+
+$general_keywords_1
+  coordinate_system=spheroidal number_of_spatial_dimensions=1
+  maximum_m_value=2 coordinate_label_1=eta 
+  sector_points sector_factors sector_polynomials sector_matrices
+  weighting_function=legendre reference_weight=none diagonalize
+  sector_matrices hamiltonian eigenvalues diagonalize
+$end
+
+$spheroidal_eta
+euse_space_data automate reuse_sector_information
+ number_of_fixed_points=0 xleft_fixed_point xright_fixed_point
+ xdrop_left_function xdrop_right_function number_of_major_blocks=4
+ maximum_m_value=2 
+$end
+
+$eta_block_1
+ number_of_subregions=1 left_boundary=-1.d0
+ right_boundary=-0.5d0 default_order=20
+$end
+
+$eta_block_2
+ number_of_subregions=1 left_boundary=-0.5d0
+ right_boundary=0.00 default_order=20
+$end
+
+$eta_block_3
+ number_of_subregions=1 left_boundary=0.d0
+ right_boundary=0.50 default_order=20
+$end
+
+$eta_block_4
+ number_of_subregions=1 left_boundary=0.50
+ right_boundary=1.00 default_order=20
+$end
+
+$potential
+ potential_type_region_1=none 
+$end 

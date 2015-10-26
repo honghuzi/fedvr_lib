@@ -1,0 +1,26 @@
+$dvr_basis
+ number-of-space-variables=1 space-variable-1=rho
+ coordinate-system=cylindrical kinetic-energy-type=packed 
+$end
+
+$h0(rho)
+ read-grid-parameters number-of-fixed-points=2
+ left-fixed-point right-fixed-point print=all
+ xdrop-left-function drop-right-function weight-type=r
+ automate number-of-major-blocks=1
+ number-of-reference-quadrature-points-per-region=200
+$end
+
+ $block-1
+  default-order=(50) number-of-subregions=1
+  left-boundary=0.00001d0 right-boundary=1.0d0
+ $end
+
+ $block-2
+  default-order=(40) number-of-subregions=1
+  left-boundary=0.9d0 right-boundary=1.0d0
+ $end
+
+$v_reg_1(rho)
+ use-atomic-units potential=none angular-momentum=1
+$end

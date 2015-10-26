@@ -1,0 +1,15 @@
+$pde
+  coordinate_system=spherical type_xdifferential_equation=eigenvalue
+  number_of_dimensions=1  number_of_energies=1 coordinate_label_1=r
+  sector_matrices form_hamiltonian  form_nabla xdiagonalize_nabla 
+  type_differential_equation=linear_system xdiagonalize_hamiltonian
+  print_hamiltonian print_nabla maximum_orbital_l=3
+$end
+
+$poisson_r
+ number_of_right_hand_sides=1 inhomogeneity=one
+$end
+
+$potential_r
+ potential_type_region_1=well well_depth=0.d0
+$end
